@@ -1,8 +1,11 @@
 #Imports:
 import time
-import random 
+import random
 
-#Lists - Cards and Suits
+
+#Lists
+
+#Card and suits
 Aces = ["AceClubs", "AceSpades", "AceDiamonds", "AceHearts"]
 Twos = ["2.Clubs", "2.Spades", "2.Diamonds", "2.Hearts"]
 Threes = ["3.Clubs", "3.Spades", "3.Diamonds", "3.Hearts"]
@@ -16,4 +19,13 @@ Tens = ["10.Clubs", "10.Spades", "10.Diamonds", "10.Hearts"]
 Jacks = ["J.Clubs", "J.Spades", "J.Diamonds", "J.Hearts"]
 Queens = ["Q.Clubs", "Q.Spades", "Q.Diamonds", "Q.Hearts"]
 Kings = ["K.Clubs", "K.Spades", "K.Diamonds", "K.Hearts"]
+
+#Player & A.I starting hand
+player_hand = []
+ai_hand = []
+
+#Dealer Shuffling
+
+def shuffle:
+
 
