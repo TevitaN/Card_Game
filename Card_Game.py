@@ -3,7 +3,6 @@ import time
 import random
 
 
-#Lists
 
 #Card and suits
 Aces = ["AceClubs", "AceSpades", "AceDiamonds", "AceHearts"]
@@ -19,13 +18,25 @@ Tens = ["10.Clubs", "10.Spades", "10.Diamonds", "10.Hearts"]
 Jacks = ["J.Clubs", "J.Spades", "J.Diamonds", "J.Hearts"]
 Queens = ["Q.Clubs", "Q.Spades", "Q.Diamonds", "Q.Hearts"]
 Kings = ["K.Clubs", "K.Spades", "K.Diamonds", "K.Hearts"]
+Deck = [Aces, Twos, Threes, Fours, Fives, Sixes, Sevens, Eights, Nines, Tens, Jacks, Queens, Kings]
+
 
 #Player & A.I starting hand
 player_hand = []
 ai_hand = []
 
-#Dealer Shuffling
+#Deal Player and AI cards
+def p_shuffle():
+    random_picker = random.choice(Deck)
+    player_hand.append(random_picker)
+    print(player_hand)
+p_shuffle()
 
-def shuffle:
+def a_shuffle():
+    random_picker = random.choice(Deck)
+    ai_hand.append(random_picker)
+    print(ai_hand)
+a_shuffle()
+
 
 
