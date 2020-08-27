@@ -34,15 +34,68 @@ def p_shuffle(Deck, player_hand, Aces):
             Card = random.choice(Aces)
             player_hand.append(Card)
             Aces.remove(Card)
-            print(Aces)
-            return player_hand
-        #random_chooser = random.choice(random_picker)
-        #print("Random Chooser: ",random_chooser)
-        # Deck.pop(random_chooser)
-        # player_hand.append(random_chooser)
-print(Deck)
-player_hand = p_shuffle(Deck, player_hand, Aces)
+
+        if random_picker == "Twos":
+           Card = random.choice(Twos)
+           player_hand.append(Card)
+           Twos.remove(Card)
+
+        if random_picker == "Threes":
+            Card = random.choice(Threes)
+            player_hand.append(Card)
+            Threes.remove(Card)
+
+        if random_picker == "Fours":
+            Card = random.choice(Fours)
+            player_hand.append(Card)
+            Fours.remove(Card)
+
+        if random_picker == "Fives":
+            Card = random.choice(Fives)
+            player_hand.append(Card)
+            Fives.remove(Card)
+
+        if random_picker == "Sixes":
+            Card = random.choice(Sixes)
+            player_hand.append(Card)
+            Sixes.remove(Card)
+
+        if random_picker == "Sevens":
+            Card = random.choice(Sevens)
+            player_hand.append(Card)
+            Sevens.remove(Card)
+
+        if random_picker == "Eights":
+            Card = random.choice(Eights)
+            player_hand.append(Card)
+            Eights.remove(Card)
+
+        if random_picker == "Nines":
+            Card = random.choice(Nines)
+            player_hand.append(Card)
+            Nines.remove(Card)
+
+        if random_picker == "Tens":
+            Card = random.choice(Tens)
+            player_hand.append(Card)
+            Tens.remove(Card)
+
+        if random_picker == "Jacks":
+            Card = random.choice(Jacks)
+            player_hand.append(Card)
+            Jacks.remove(Card)
+        if random_picker == "Queens":
+            Card = random.choice(Queens)
+            player_hand.append(Card)
+            Queens.remove(Card)
+
+        if random_picker == "Kings":
+            Card = random.choice(Kings)
+            player_hand.append(Card)
+            Kings.remove(Card)
+p_shuffle(Deck, player_hand, Aces)
 print(player_hand)
+
 
 
 
