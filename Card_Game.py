@@ -25,7 +25,7 @@ ai_hand = []
 # This function deals five cards to the player hand list.
 # It does this by random slection from the Deck list. The result accesses the suits lists and a random selection taken
 # from the list stored in the random_picker variable.
-def p_shuffle(Deck, player_hand, Aces):
+def p_shuffle(Deck, player_hand, ):
     for i in range(5):
         random_picker = random.choice(Deck)
         #random_picker = "Aces"
@@ -93,9 +93,80 @@ def p_shuffle(Deck, player_hand, Aces):
             Card = random.choice(Kings)
             player_hand.append(Card)
             Kings.remove(Card)
-p_shuffle(Deck, player_hand, Aces)
+p_shuffle(Deck, player_hand,)
 print(player_hand)
 
+
+def a_shuffle(ai_hand,Deck):
+    for i in range(5):
+        random_picker = random.choice(Deck)
+        print("Picker", random_picker)
+        if random_picker == "Aces":
+            Card = random.choice(Aces)
+            ai_hand.append(Card)
+            Aces.remove(Card)
+
+        if random_picker == "Twos":
+           Card = random.choice(Twos)
+           ai_hand.append(Card)
+           Twos.remove(Card)
+
+        if random_picker == "Threes":
+            Card = random.choice(Threes)
+            ai_hand.append(Card)
+            Threes.remove(Card)
+
+        if random_picker == "Fours":
+            Card = random.choice(Fours)
+            ai_hand.append(Card)
+            Fours.remove(Card)
+
+        if random_picker == "Fives":
+            Card = random.choice(Fives)
+            ai_hand.append(Card)
+            Fives.remove(Card)
+
+        if random_picker == "Sixes":
+            Card = random.choice(Sixes)
+            ai_hand.append(Card)
+            Sixes.remove(Card)
+
+        if random_picker == "Sevens":
+            Card = random.choice(Sevens)
+            ai_hand.append(Card)
+            Sevens.remove(Card)
+
+        if random_picker == "Eights":
+            Card = random.choice(Eights)
+            ai_hand.append(Card)
+            Eights.remove(Card)
+
+        if random_picker == "Nines":
+            Card = random.choice(Nines)
+            ai_hand.append(Card)
+            Nines.remove(Card)
+
+        if random_picker == "Tens":
+            Card = random.choice(Tens)
+            ai_hand.append(Card)
+            Tens.remove(Card)
+
+        if random_picker == "Jacks":
+            Card = random.choice(Jacks)
+            ai_hand.append(Card)
+            Jacks.remove(Card)
+
+        if random_picker == "Queens":
+            Card = random.choice(Queens)
+            ai_hand.append(Card)
+            Queens.remove(Card)
+
+        if random_picker == "Kings":
+            Card = random.choice(Kings)
+            ai_hand.append(Card)
+            Kings.remove(Card)
+a_shuffle(Deck,ai_hand)
+print(ai_hand)
 
 
 
