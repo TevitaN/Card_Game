@@ -3,7 +3,7 @@ import time
 import random
 
 # Card and suits
-Aces = ["AceClubs", "AceSpades", "AceDiamonds", "AceHearts"]
+Aces = ["A.Clubs", "A.Spades", "A.Diamonds", "A.Hearts"]
 Twos = ["2.Clubs", "2.Spades", "2.Diamonds", "2.Hearts"]
 Threes = ["3.Clubs", "3.Spades", "3.Diamonds", "3.Hearts"]
 Fours = ["4.Clubs", "4.Spades", "4.Diamonds", "4.Hearts"]
@@ -21,15 +21,14 @@ Deck = ["Aces", "Twos", "Threes", "Fours", "Fives", "Sixes", "Sevens", "Eights",
 # Player & A.I starting hand
 player_hand = []
 ai_hand = []
+card_played = []
 
 # This function deals five cards to the player hand list.
 # It does this by random slection from the Deck list. The result accesses the suits lists and a random selection taken
 # from the list stored in the random_picker variable.
-def p_shuffle(Deck, player_hand, ):
+def p_shuffle( player_hand ):
     for i in range(5):
         random_picker = random.choice(Deck)
-        #random_picker = "Aces"
-        print("Picker", random_picker)
         if random_picker == "Aces":
             Card = random.choice(Aces)
             player_hand.append(Card)
@@ -93,14 +92,13 @@ def p_shuffle(Deck, player_hand, ):
             Card = random.choice(Kings)
             player_hand.append(Card)
             Kings.remove(Card)
-p_shuffle(Deck, player_hand,)
+p_shuffle( player_hand)
 print(player_hand)
 
 
-def a_shuffle(ai_hand,Deck):
+def a_shuffle(ai_hand):
     for i in range(5):
         random_picker = random.choice(Deck)
-        print("Picker", random_picker)
         if random_picker == "Aces":
             Card = random.choice(Aces)
             ai_hand.append(Card)
@@ -165,8 +163,87 @@ def a_shuffle(ai_hand,Deck):
             Card = random.choice(Kings)
             ai_hand.append(Card)
             Kings.remove(Card)
-a_shuffle(Deck,ai_hand)
+a_shuffle(ai_hand)
 print(ai_hand)
+
+#Dealer putting down starting card
+def start_card():
+    choose_card = random.choice(Deck)
+    if choose_card == "Aces":
+        use_it = random.choice(Aces)
+        print(use_it)
+
+    if choose_card == "Twos":
+        use_it = random.choice(Twos)
+        print(use_it)
+
+    if choose_card == "Threes":
+        use_it = random.choice(Threes)
+        print(use_it)
+
+    if choose_card == "Fours":
+        use_it = random.choice(Fours)
+        print(use_it)
+
+    if choose_card == "Fives":
+        use_it = random.choice(Fives)
+        print(use_it)
+
+    if choose_card == "Sixes":
+        use_it = random.choice(Sixes)
+        print(use_it)
+
+    if choose_card == "Sevens":
+        use_it = random.choice(Sevens)
+        print(use_it)
+
+    if choose_card == "Eights":
+        use_it = random.choice(Eights)
+        print(use_it)
+
+    if choose_card == "Nines":
+        use_it = random.choice(Nines)
+        print(use_it)
+
+    if choose_card == "Tens":
+        use_it = random.choice(Tens)
+        print(use_it)
+
+    if choose_card == "Jacks":
+        use_it = random.choice(Jacks)
+        print(use_it)
+
+    if choose_card == "Queens":
+        use_it = random.choice(Queens)
+        print(use_it)
+
+    if choose_card == "Kings":
+        use_it = random.choice(Kings)
+        print(use_it)
+
+card_played.append(start_card())
+
+
+#Players Turn
+i = 1
+while i == 1:
+    time.sleep(1)
+    player_turn = input("Which card would you like to put down..?")
+    card_down = []
+    card_comparing = []
+    if player_turn == "1":
+        usercard_check = player_hand[0]
+        downcard_check = card_played[0]
+        for symbol in downcard_check:
+            card_down.append(symbol)
+        for character in usercard_check:
+            card_comparing.append(character)
+
+        if card_down[0] == card_comparing[0]:
+            player_hand[0].remove
+        else:
+            print("Card eligible to play")
+
 
 
 
